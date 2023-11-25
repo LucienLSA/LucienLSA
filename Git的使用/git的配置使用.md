@@ -89,8 +89,52 @@ build/       #忽略build/目录下的所有文件
 doc/*.txt    #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 ```
 
+## 8 使用github
+
+### 8.1 github添加SSH公钥
+
+### 8.2 git的使用及上传至远程仓库
+
+新建git项目
+
+git init
+
+创建新的工程项目或将已有的项目加入到.git文件夹下，注意尽量包括README文件和.gitgnore文件
+
+* 添加到暂存区，git add .
+* commit 提交，git commit -m""
+* push到远程仓库, git push
+
+8.3 git分支
+
+git分支中常用指令：
+
+```
+# 列出所有本地分支
+git branch
 
 
-8 使用github
+# 列出所有远程分支
+git branch -r
 
-8.1 github添加SSH公钥
+
+# 新建一个分支，但依然停留在当前分支
+git branch [branch-name]
+
+
+# 新建一个分支，并切换到该分支
+git checkout -b [branch]
+
+
+# 合并指定分支到当前分支
+$ git merge [branch]
+
+
+# 删除分支
+$ git branch -d [branch-name]
+
+
+# 删除远程分支
+$ git push origin --delete [branch-name]
+$ git branch -dr [remote/branch]
+```
